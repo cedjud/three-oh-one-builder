@@ -1,0 +1,20 @@
+.container {
+	margin: 0 .25rem .5rem;
+	border: 1px solid black;
+	border-radius: .25rem;
+}
+
+.container label {
+	display: inline-block;
+	padding: .25rem;
+	user-select: none;
+}
+
+.container input[type="checkbox"] {
+	display: none;
+}
+
+.container input[type="checkbox"]:checked + label {
+	background: black;
+	color: white;
+}
