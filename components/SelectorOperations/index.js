@@ -7,8 +7,6 @@ const SelectorOperation = ({ selector, operation }) => {
 	const updateSelectorOperation = useStore(state => state.updateSelectorOperation);
 
 	const handleChange = ({target}) => {
-		// console.log(event.target.value)
-		// console.log('selector : ', selector);
 		updateSelectorOperation({selector, operation: target.value})
 	}
 
@@ -17,8 +15,8 @@ const SelectorOperation = ({ selector, operation }) => {
       {selector}
       <select value={operation} onChange={handleChange}>
         <option value={AND}>{AND}</option>
-        <option value={OR}>{OR}</option>
         <option value={NOT}>{NOT}</option>
+        <option value={OR}>{OR}</option>
       </select>
     </span>
   );
